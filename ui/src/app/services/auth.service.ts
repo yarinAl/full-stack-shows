@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs'
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'https://average-hare-tuxedo.cyclic.app'
+  private apiUrl = 'http://localhost:3000'
   private apiUrlRegister = `${this.apiUrl}/register`
   private apiUrlLogin = `${this.apiUrl}/login`
   private loggedIn = new BehaviorSubject<boolean>(
