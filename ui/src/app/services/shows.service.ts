@@ -5,7 +5,7 @@ import { Episode, Season, Show, ShowSearch } from '../interfaces/show.interface'
 
 @Injectable()
 export class ShowsService {
-  private apiUrl = ' http://localhost:3000'
+  private apiUrl = 'http://localhost:3000'
   private apiUrlShows = `${this.apiUrl}/shows`
   private apiUrlSeasons = `${this.apiUrl}/seasons`
   private apiUrlEpisode = `${this.apiUrl}/episodes`
