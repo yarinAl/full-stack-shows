@@ -1,0 +1,78 @@
+:host {
+  text-align: center;
+  background: #121212;
+  // width: min(90vw, 1200px);
+  // display: block;
+  // margin: auto;
+
+  .show-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 15px;
+    gap: 30px;
+    background: #121212;
+    max-width: 1810px;
+    margin: auto;
+
+    .show-grid-item {
+      color: white;
+      border: 1px solid #121212;
+      font-size: 30px;
+      text-align: center;
+      transition: transform 0.3s;
+      background-size: cover;
+      height: 320px;
+      border-radius: 10px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .h2 {
+      color: white;
+    }
+    a {
+      display: block;
+      position: relative;
+      height: 100%;
+      border-radius: 10px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.2);
+        transition: background 500ms;
+      }
+
+      &:hover {
+        &::before {
+          background: unset;
+        }
+      }
+
+      .like-button {
+        color: crimson;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: transform 0.3s;
+      }
+
+      .like-button:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+  // img {
+  //   height: 320px;
+  // }
+  .divider {
+    background: rgb(242, 232, 232);
+    height: 1px;
+  }
+}

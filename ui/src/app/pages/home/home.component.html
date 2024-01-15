@@ -1,0 +1,19 @@
+<div style="color: aliceblue" class="divider"></div>
+<div class="show-grid-container">
+  <div
+    class="show-grid-item"
+    [ngStyle]="{ backgroundImage: 'url(' + show.image + ')' }"
+    *ngFor="let show of shows"
+  >
+    <a [routerLink]="'/show/' + [show.id]">
+      <!-- <h3>{{ show.name }}</h3> -->
+      <!-- <img [src]="show.image" alt="" /> -->
+      <mat-icon
+        class="like-button"
+        type="button"
+        onclick="console.log('clicked')"
+        >favorite</mat-icon
+      ></a
+    >
+  </div>
+</div>

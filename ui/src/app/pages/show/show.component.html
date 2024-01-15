@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="ratings">
+    <div class="d-flex rating-list align-items-center">
+      <div class="w-50"></div>
+    </div>
+  </div>
+  <img [src]="show?.image" alt="" srcset="" />
+  <div class="text-content">
+    <h2>{{ show?.name }}</h2>
+    <p [innerHTML]="show?.summary"></p>
+  </div>
+</div>
+<div class="list-container-wrapper">
+  <div class="seasons">
+    <mat-form-field>
+      <mat-select
+        panelWidth="190px"
+        [formControl]="selectedOption"
+        placeholder="Season 1"
+      >
+        <mat-option *ngFor="let season of seasons" [value]="season.id">
+          Season {{ season.number }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <ul class="list-container">
+    <li class="list-item" *ngFor="let episode of episodes">
+      <a [routerLink]="['/episode', episode.id]">
+        <div class="top-episode">
+          <div class="right">
+            <mat-icon>info</mat-icon>
+          </div>
+          <div class="left">Episode {{ episode.number }}</div>
+        </div>
+        <div class="bot-episode">{{ episode.name }}</div>
+      </a>
+    </li>
+  </ul>
+</div>

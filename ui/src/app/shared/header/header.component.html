@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="rightPartLinks">
+    <a class="logo" [routerLink]="'/home'">MyShows</a>
+    <!-- <a class="headerLink" routerLink="routeName">Trending</a>
+    <a class="headerLink" routerLink="routeName">Anime</a>
+    <a class="headerLink" routerLink="routeName">Top Imbd</a> -->
+  </div>
+  <div class="LeftPartLinks">
+    <app-autocomplete
+      [formControl]="searchText"
+      [items]="autoCompleteItems$ | async"
+      (optionClick)="onAutoCompleteOptionClick($event)"
+    ></app-autocomplete>
+    <button
+      *ngIf="!(auth.isLoggedIn | async)"
+      class="profile"
+      aria-label="profile"
+      mat-raised-button
+      (click)="openDialog()"
+    >
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <button class="burger-menu">
+      <mat-icon
+        mat-button
+        [matMenuTriggerFor]="menu"
+        *ngIf="auth.isLoggedIn | async"
+        >dehaze</mat-icon
+      >
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="'/profile'">Profile</button>
+      <button mat-menu-item>Logout</button>
+    </mat-menu>
+  </div>
+</div>

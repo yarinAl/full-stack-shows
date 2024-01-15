@@ -1,0 +1,116 @@
+.input-container {
+  display: flex;
+  margin-right: 10px;
+  background: #1d252c;
+  border-radius: 10px;
+  height: 35px;
+  width: 400px;
+  .search-icon,
+  .search-input {
+    color: rgb(183, 182, 182);
+    transform: scale(0.9);
+    background: #1d252c;
+    align-self: center;
+  }
+  .search-icon {
+    padding: 5px;
+  }
+  .search-input {
+    width: 300px;
+    font-size: 1rem;
+    &::placeholder {
+      color: rgb(183, 182, 182);
+      text-align: left;
+    }
+  }
+  input {
+    all: unset;
+  }
+}
+
+::ng-deep {
+  .mat-mdc-option .mat-icon,
+  .mat-mdc-option .mat-pseudo-checkbox-full {
+    margin-right: 0 !important;
+  }
+  .cdk-overlay-pane {
+    margin-left: -45px !important;
+
+    .auto-complete-container {
+      display: grid !important;
+      gap: 10px !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      max-height: initial !important;
+      background: #13181c;
+      &.mdc-menu-surface {
+        margin-top: 10px !important;
+      }
+
+      > mat-option {
+        background: #1d252c !important;
+
+        border-radius: 15px !important;
+        min-height: 58px !important;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.58) !important;
+          .text-content {
+            .title {
+              color: rgb(53, 158, 210);
+            }
+          }
+        }
+
+        &:hover {
+          > .mdc-list-item__primary-text {
+            img {
+              clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0 100%);
+            }
+          }
+        }
+
+        &.mat-mdc-option {
+          padding-right: 0 !important;
+        }
+
+        > .mdc-list-item__primary-text {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          padding-right: 0 !important;
+          align-items: center;
+
+          > .text-content {
+            display: flex;
+            flex-direction: column;
+
+            // > .title {
+            // }
+
+            > .content {
+              color: rgb(183, 182, 182);
+              display: flex;
+              font-size: 0.8rem;
+              .rating-star {
+                transform: scale(0.65);
+              }
+            }
+          }
+
+          > .image-content {
+            width: 60px;
+            height: 70px;
+          }
+          img {
+            height: 100%;
+            width: 60px;
+            clip-path: polygon(35% 0, 100% 0%, 100% 100%, 20% 100%);
+            // clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0 100%);
+            transition: clip-path 500ms;
+          }
+        }
+      }
+    }
+  }
+}

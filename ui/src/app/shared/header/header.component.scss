@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  height: 80px;
+
+  .rightPartLinks {
+    margin-left: 20px;
+
+    a {
+      color: white;
+      margin-right: 5px;
+    }
+
+    .headerLink {
+      font-size: x-large;
+      margin-left: 15px;
+    }
+
+    .logo {
+      font-size: xx-large;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  }
+
+  .LeftPartLinks {
+    display: flex;
+    margin-right: 50px;
+
+    .profile {
+      color: #ffffff;
+      transform: scale(1.4);
+    }
+  }
+
+  // Media Query for mobile devices
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+
+    .rightPartLinks {
+      margin: 0;
+      .headerLink {
+        margin: 0;
+      }
+    }
+    .LeftPartLinks {
+      margin: 0;
+
+      a,
+      .search,
+      .profile {
+        margin-right: 10px; // reduce margin for smaller screens
+      }
+    }
+  }
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+::ng-deep .burger-menu {
+  color: white;
+}
