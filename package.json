@@ -2,11 +2,6 @@
   "name": "full-stack-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "cd ui && npm start",
-    "start-api": "cd api && npm start",
-    "start-ui": "cd ui && npm start"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
+    "start": "cd api && npm start"
   }
 }
