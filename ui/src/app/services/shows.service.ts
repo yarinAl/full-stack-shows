@@ -5,7 +5,7 @@ import { Episode, Season, Show, ShowSearch } from '../interfaces/show.interface'
 
 @Injectable()
 export class ShowsService {
-  private apiUrl = 'https://pear-hilarious-grasshopper.cyclic.app/api'
+  private apiUrl = 'https://pear-hilarious-grasshopper.cyclic.app/'
   private apiUrlShows = `${this.apiUrl}/shows`
   private apiUrlSeasons = `${this.apiUrl}/seasons`
   private apiUrlEpisode = `${this.apiUrl}/episodes`
