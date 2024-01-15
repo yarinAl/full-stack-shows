@@ -1,0 +1,9 @@
+{
+    "name": "full-stack-app",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "npm run start-api && npm run start-ui",
+      "start-api": "cd api && npm start",
+      "start-ui": "cd ui && npm start"
+    }
+  }
