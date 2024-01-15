@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs'
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'https://pear-hilarious-grasshopper.cyclic.app/'
+  private apiUrl = 'https://pear-hilarious-grasshopper.cyclic.app/api'
   private apiUrlRegister = `${this.apiUrl}/register`
   private apiUrlLogin = `${this.apiUrl}/login`
   private loggedIn = new BehaviorSubject<boolean>(
