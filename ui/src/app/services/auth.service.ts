@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs'
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000'
+  private apiUrl = ''
   private apiUrlRegister = `${this.apiUrl}/register`
   private apiUrlLogin = `${this.apiUrl}/login`
   private loggedIn = new BehaviorSubject<boolean>(
